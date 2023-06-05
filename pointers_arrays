@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void arrayp()
+{
+	// Declare an array
+	int val[3] = { 5, 10, 20 };
+
+	// declare pointer variable
+	int* ptr;
+
+	// Assign the address of val[0] to ptr
+	// We can use ptr=&val[0];(both are same)
+	ptr = val;
+	cout << "Memory Locations of 'pointed' array members ";
+	cout << &ptr[0] << " " << &ptr[1] << " " << &ptr[2] << endl;
+	cout << "Accessing array members using pointers ";
+	cout << ptr[0] << " " << ptr[1] << " " << ptr[2] << endl;
+	cout << "Memory locations of array members ";
+	cout << &val[0] << " " << &val[1] << " " << &val[2] << endl;
+	cout << "Accessing array members without pointers ";
+	cout << val[0] << " " << val[1] << " " << val[2] << endl;
+}
+// Driver program
+int main() { arrayp(); }
