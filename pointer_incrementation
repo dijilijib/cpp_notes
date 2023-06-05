@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void ptrinc()
+{
+    // Declare an array
+    int v[3] = { 10, 100, 200 };
+  
+    // declare pointer variable
+    int* ptr;
+  
+    // Assign the address of v[0] to ptr
+    ptr = v;
+  
+    // pointer and array have same memory address.
+    for (int i = 0; i < 3; i++) {
+        cout << "Value at ptr = " << ptr << "\n";
+        cout << "Value at *ptr = " << *ptr << "\n";
+        cout << "Value at v[i] = " << v[i] << "\n";
+        cout << "Value at &v[i] = " << &v[i] << "\n";
+        cout << "-------------------------" << endl;
+  
+        // Increment pointer ptr by 1
+        ptr++;
+    }
+}
+  
+// Driver program
+int main() { ptrinc(); }
