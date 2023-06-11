@@ -1,8 +1,23 @@
 #include <iostream>
 using namespace std;
 
-// bubble sort
-// two next to elements are compared and swapped until the full array is sorted
+// bubble sort:
+// ------------
+// [first loop]
+// stars from index 0 to (array length)
+// [second loop]
+// stars from index 0+1 to (array length - 1)
+// compares [i] and [j], [j+1] .... 
+// ------------------------------
+// [the first iteration]
+// --------------------
+// compares arr[0] with all numbers between arr[1] and arr[sizeof(arr)]
+// smallest numbers replaced with arr[0] - then arr[0] contains smallest number
+// ------------------
+// [other iterations]:
+// ------------------
+// in every iteration array's corresponding index get filled with the smallest number in remaining numbers
+
 
 void SelectionSort(int arr[], int n) {
     int min; // index of a smallest element
