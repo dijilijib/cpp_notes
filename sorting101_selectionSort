@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// bubble sort:
+// selection sort:
 // ------------
 // [first loop]
 // stars from index 0 to (array length)
