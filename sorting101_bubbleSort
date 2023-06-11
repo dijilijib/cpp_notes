@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+// bubble sort
+// two next to elements are compared and swapped until the full array is sorted
+
+void SelectionSort(int arr[], int n) {
+    int min; // index of a smallest element
+    for(int i=0; i < n-1; i++) {
+        min = i;
+        for(int j=i+1; j<n; j++) {
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+        swap(arr[min], arr[i]);
+    }
+}
+// to change actual values we need to memory locations
+// or this version could be used:
+
+/*
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+*/
+
+void swap(int& a, int& b) {
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+
+void printArray(int arr[], int size) {
+    for(int i = 0; i<size; i++) {
+        cout << arr[i] << " ";    
+    }    
+}
+
+int main() {
+    int arr[] = {5,2,42,6,1,3,2};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    SelectionSort(arr, n);
+    printArray(arr, n);
+    return 0;
+}
